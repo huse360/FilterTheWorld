@@ -15,6 +15,7 @@
 		95F268B62B30E40E00DC8C83 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F268B52B30E40E00DC8C83 /* FrameView.swift */; };
 		95F268B82B30E63600DC8C83 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F268B72B30E63600DC8C83 /* CameraManager.swift */; };
 		95F268BA2B31040300DC8C83 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F268B92B31040300DC8C83 /* FrameManager.swift */; };
+		95F268BC2B3106DD00DC8C83 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F268BB2B3106DD00DC8C83 /* ContentViewModel.swift */; };
 		9F69EE4C26942A8A00746CD7 /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69EE4B26942A8A00746CD7 /* CameraError.swift */; };
 		9F69EE562696F0A200746CD7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69EE552696F0A200746CD7 /* ErrorView.swift */; };
 		9F69EE5C269721B500746CD7 /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69EE5B269721B500746CD7 /* CGImageExtension.swift */; };
@@ -33,6 +34,7 @@
 		95F268B52B30E40E00DC8C83 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		95F268B72B30E63600DC8C83 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		95F268B92B31040300DC8C83 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
+		95F268BB2B3106DD00DC8C83 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		9F69EE4B26942A8A00746CD7 /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
 		9F69EE552696F0A200746CD7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		9F69EE5B269721B500746CD7 /* CGImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImageExtension.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		9F69EE582696F17100746CD7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				95F268BB2B3106DD00DC8C83 /* ContentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */,
 				95F268BA2B31040300DC8C83 /* FrameManager.swift in Sources */,
 				9F69EE5E26978D0E00746CD7 /* ToggleButton.swift in Sources */,
+				95F268BC2B3106DD00DC8C83 /* ContentViewModel.swift in Sources */,
 				9F69EE4C26942A8A00746CD7 /* CameraError.swift in Sources */,
 				95F268B82B30E63600DC8C83 /* CameraManager.swift in Sources */,
 				9F69EE562696F0A200746CD7 /* ErrorView.swift in Sources */,
