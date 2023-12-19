@@ -14,6 +14,7 @@
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
 		95F268B62B30E40E00DC8C83 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F268B52B30E40E00DC8C83 /* FrameView.swift */; };
 		95F268B82B30E63600DC8C83 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F268B72B30E63600DC8C83 /* CameraManager.swift */; };
+		95F268BA2B31040300DC8C83 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F268B92B31040300DC8C83 /* FrameManager.swift */; };
 		9F69EE4C26942A8A00746CD7 /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69EE4B26942A8A00746CD7 /* CameraError.swift */; };
 		9F69EE562696F0A200746CD7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69EE552696F0A200746CD7 /* ErrorView.swift */; };
 		9F69EE5C269721B500746CD7 /* CGImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69EE5B269721B500746CD7 /* CGImageExtension.swift */; };
@@ -31,6 +32,7 @@
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95F268B52B30E40E00DC8C83 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		95F268B72B30E63600DC8C83 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		95F268B92B31040300DC8C83 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		9F69EE4B26942A8A00746CD7 /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
 		9F69EE552696F0A200746CD7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		9F69EE5B269721B500746CD7 /* CGImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImageExtension.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				9F69EE4B26942A8A00746CD7 /* CameraError.swift */,
 				95F268B72B30E63600DC8C83 /* CameraManager.swift */,
+				95F268B92B31040300DC8C83 /* FrameManager.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				9F69EE602698210900746CD7 /* ControlView.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */,
+				95F268BA2B31040300DC8C83 /* FrameManager.swift in Sources */,
 				9F69EE5E26978D0E00746CD7 /* ToggleButton.swift in Sources */,
 				9F69EE4C26942A8A00746CD7 /* CameraError.swift in Sources */,
 				95F268B82B30E63600DC8C83 /* CameraManager.swift in Sources */,
