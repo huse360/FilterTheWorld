@@ -20,7 +20,11 @@ class CameraManager: ObservableObject {
   }
 
   private func configure() {
-
+    checkPermissions()
+    sessionQueue.async {
+      self.configureCaptureSession()
+      self.session.startRunning()
+    }
   }
 
   private func set(error: CameraError?) {
@@ -29,7 +33,19 @@ class CameraManager: ObservableObject {
     }
   }
 
-  private func chechPermissions() {
+  func set (
+    _ delegate: AVCaptureVideoDataOutputSampleBufferDelegate,
+    queue: DispatchQueue
+  ) {
+    sessionQueue.async {
+      self.videoOutput.setSampleBufferDelegate(
+        delegate,
+        queue: queue
+      )
+    }
+  }
+
+  private func checkPermissions() {
     switch AVCaptureDevice.authorizationStatus(for: .video) {
     case .notDetermined:
       sessionQueue.suspend()
@@ -52,5 +68,51 @@ class CameraManager: ObservableObject {
       status = .unauthorized
       set(error: .unknownAuthorization)
     }
+  }
+
+  private func configureCaptureSession() {
+    guard status == .unconfigured else { return }
+    session.beginConfiguration()
+    defer {
+      session.commitConfiguration()
+    }
+    let device = AVCaptureDevice.default(
+      .builtInWideAngleCamera,
+      for: .video,
+      position: .front
+    )
+
+    guard let camera = device else {
+      set(error: .cameraUnavailable)
+      status = .failed
+      return
+    }
+
+    do {
+      let cameraInput = try AVCaptureDeviceInput(device: camera)
+      if session.canAddInput(cameraInput) {
+        session.addInput(cameraInput)
+      } else {
+        set(error: .cannotAddInput)
+        status = .failed
+        return
+      }
+    } catch {
+      set(error: .createCaptureInput(error))
+      status = .failed
+      return
+    }
+    if session.canAddOutput(videoOutput) {
+      session.addOutput(videoOutput)
+      videoOutput.videoSettings =
+        [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
+      let videoConnection = videoOutput.connection(with: .video)
+      videoConnection?.videoOrientation = .portrait
+    } else {
+      set(error: .cannotAddOutput)
+      status = .failed
+      return
+    }
+    status = .configured
   }
 }
