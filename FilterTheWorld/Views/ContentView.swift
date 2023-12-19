@@ -33,9 +33,10 @@
 import SwiftUI
 
 struct ContentView: View {
+  @StateObject private var model = ContentViewModel()
   var body: some View {
     ZStack {
-      FrameView(image: nil)
+      FrameView(image: model.frame)
         .edgesIgnoringSafeArea(.all)
     }
   }
